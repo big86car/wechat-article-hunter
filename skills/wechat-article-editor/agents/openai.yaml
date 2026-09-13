@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Editor"
+  short_description: "从事实、逻辑、文风和传播价值四方面完成公众号终审"
+  default_prompt: "Use $wechat-article-editor to fact-check and finalize this Chinese WeChat article."

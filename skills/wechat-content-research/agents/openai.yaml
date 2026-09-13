@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Content Research"
+  short_description: "为公众号文章建立可追溯的研究包与事实证据账本"
+  default_prompt: "Use $wechat-content-research to build a verified research pack for this WeChat article."

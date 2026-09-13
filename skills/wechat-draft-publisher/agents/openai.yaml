@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Draft Publisher"
+  short_description: "在明确授权后准备或提交微信公众号草稿箱并记录回执"
+  default_prompt: "Use $wechat-draft-publisher to prepare this finalized article for the WeChat draft box."

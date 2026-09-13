@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Writer"
+  short_description: "依据研究与大纲生成专业、自然且有判断的公众号正文"
+  default_prompt: "Use $wechat-article-writer to draft a source-grounded Chinese WeChat article."

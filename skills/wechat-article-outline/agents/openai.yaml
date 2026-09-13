@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Article Outline"
+  short_description: "将研究材料转化为论点清晰、证据映射完整的文章大纲"
+  default_prompt: "Use $wechat-article-outline to design an evidence-mapped WeChat article outline."

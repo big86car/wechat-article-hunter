@@ -1,0 +1,6 @@
+interface:
+  display_name: "WeChat Article Hunter"
+  short_description: "从选题研究到图文排版的微信公众号内容流水线"
+  default_prompt: "Use $wechat-article-hunter to create an evidence-based WeChat article workflow."
+policy:
+  allow_implicit_invocation: true

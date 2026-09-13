@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Layout"
+  short_description: "将定稿转换为移动端友好的微信公众号内联样式 HTML"
+  default_prompt: "Use $wechat-layout to convert this final Markdown article into WeChat-ready HTML."

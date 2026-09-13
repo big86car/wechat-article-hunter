@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Topic Hunter"
+  short_description: "发现、评分并筛选值得投入的微信公众号选题"
+  default_prompt: "Use $wechat-topic-hunter to find and rank evidence-backed WeChat article topics."
