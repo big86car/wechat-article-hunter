@@ -29,3 +29,7 @@ Use `wechat-articles/YYYY-MM-DD-<ascii-slug>/` unless the user supplies another 
 `source_policy.languages` controls source language, not article language. Empty means no language restriction. Record unavailable evidence rather than weakening policy silently.
 
 Treat a downstream artifact as stale when an approved upstream artifact changes materially. Preserve old files by versioning; do not overwrite user edits without inspection.
+
+## Provenance fields
+
+Each item in `materials` should record `type`, `path_or_url`, `rights_basis` (`public`, `user_owned`, `licensed`, or `authorized_export`), and intended use. Never assign `user_owned` or `licensed` without user-provided evidence.

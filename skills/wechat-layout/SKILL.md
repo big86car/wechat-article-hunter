@@ -13,7 +13,7 @@ Remove internal comments, alternative-title blocks, workflow notes, and unresolv
 
 ## Render
 
-Use `scripts/markdown_to_wechat_html.py article.md article.html` for the default theme. The script emits an HTML fragment with inline styles suitable for copying into a WeChat editor. Also create `article.txt` by preserving readable text and source URLs.
+Use `scripts/markdown_to_wechat_html.py article.md article.html --text-output article.txt` for the default theme. The script emits an HTML fragment with inline styles suitable for copying into a WeChat editor and a readable plain-text fallback that preserves source URLs.
 
 For custom styling, follow [references/layout-rules.md](references/layout-rules.md). Keep semantic structure and use inline CSS rather than external stylesheets, scripts, forms, iframes, or complex positioning.
 

@@ -1,0 +1,4 @@
+interface:
+  display_name: "WeChat Originality Gate"
+  short_description: "识别结构复刻、表达挪用与来源风险，验证文章新增原创价值"
+  default_prompt: "Use $wechat-originality-gate to audit this article for provenance and original value."

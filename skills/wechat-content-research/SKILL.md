@@ -7,6 +7,8 @@ description: Build a source-grounded research pack and claim ledger for a Chines
 
 Transform a selected topic into a defensible evidence base. Read the brief's source policy before searching. If a specific page, repository, paper, or current event is involved, open and inspect the primary material rather than relying on snippets.
 
+Before acquiring competitor or WeChat-native material, read [references/content-acquisition-policy.md](references/content-acquisition-policy.md). If acquisition would require bypassing authentication, session controls, CAPTCHA, rate limits, client protocols, or another access control, stop and request a compliant input method.
+
 ## Route by Content Type
 
 Read [references/research-routes.md](references/research-routes.md) and apply only the relevant route. For mixed topics, combine routes but maintain one claim ledger.
@@ -21,13 +23,15 @@ Read [references/research-routes.md](references/research-routes.md) and apply on
 6. Capture the strongest counterargument and evidence that would change the conclusion.
 7. Stop when the thesis can be supported and challenged without repetitive sources.
 
-Do not cite search-result pages, fabricate URLs, or retain a claim after its source fails to support it. Respect source-language and excluded-domain rules from the brief.
+Do not cite search-result pages, fabricate URLs, or retain a claim after its source fails to support it. Respect source-language and excluded-domain rules from the brief. Record whether each user-supplied or competitor source may be quoted, summarized, or used only as an idea lead.
 
 ## Outputs
 
 Create `research-pack.md` containing executive synthesis, timeline/context, confirmed facts, competing interpretations, counterarguments, implications for the reader, unresolved questions, and promising examples.
 
 Create `source-ledger.json` using [references/source-ledger-schema.md](references/source-ledger-schema.md). Every material numeric, causal, comparative, legal, medical, financial, product, or time-sensitive claim intended for the article needs a ledger entry.
+
+Also record `materials` provenance when the article is derived from supplied articles, transcripts, screenshots, or exports. The downstream originality gate needs this to distinguish public facts from source-specific expression and argument structure.
 
 ## Gate
 

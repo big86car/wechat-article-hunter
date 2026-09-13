@@ -4,6 +4,16 @@
 {
   "topic": "",
   "researched_at": "ISO-8601",
+  "materials": [
+    {
+      "source_id": "S01",
+      "path_or_url": "",
+      "acquisition_mode": "public|user_provided|authorized_integration",
+      "rights_basis": "public|user_owned|licensed|authorized_export",
+      "permitted_use": ["quote", "summarize", "analyze", "idea_lead"],
+      "protected_elements": []
+    }
+  ],
   "claims": [
     {
       "claim_id": "C01",

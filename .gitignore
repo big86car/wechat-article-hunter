@@ -5,3 +5,5 @@ __pycache__/
 *.env
 wechat-articles/
 dist/
+publish-receipt.json
+.wechat-token-cache.json

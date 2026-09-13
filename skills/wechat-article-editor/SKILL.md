@@ -7,6 +7,8 @@ description: Review and revise a Chinese WeChat article for factual support, rea
 
 Edit with an auditable two-output workflow: `review-report.md` records decisions; `article.md` is the clean reader-facing final. Preserve intentional author voice and do not rewrite merely to make wording different.
 
+Require a passing `originality-report.json` when the draft was built from third-party articles or substantial supplied material. Editing cannot waive a blocking provenance, attribution, or structural-reuse finding; return the draft to the indicated upstream stage.
+
 ## Review Passes
 
 1. **Evidence:** map every material claim to `source-ledger.json`; reject fabricated or overstated support.

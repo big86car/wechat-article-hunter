@@ -7,6 +7,8 @@ description: Write or rewrite a source-grounded Chinese WeChat Official Account 
 
 Create `draft.md` as a native Chinese article optimized for mobile reading and professional credibility. Read the brief, outline, research pack, and source ledger. If a required claim is unverified, qualify or omit it rather than filling the gap from memory.
 
+Use sources as evidence, not as a template. Do not preserve a source article's distinctive headline logic, section order, examples, metaphors, or conclusion and then merely change its wording. When supplied material dominates the brief, identify the new thesis, new evidence combination, or new audience application before drafting.
+
 ## Writing Priorities
 
 1. Accuracy and intellectual honesty.
@@ -38,4 +40,4 @@ Keep editorial notes and image markers out of the final reader-facing article; t
 
 ## Gate
 
-Verify that the article follows the approved thesis, contains no rejected ledger claim, meets the requested length approximately, and has no invented citation. Then hand off both `draft.md` and the source ledger to the editor.
+Verify that the article follows the approved thesis, contains no rejected ledger claim, meets the requested length approximately, and has no invented citation. Then hand off `draft.md`, the source ledger, and all material provenance to `wechat-originality-gate` before editorial finalization.

@@ -42,6 +42,7 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("input")
     parser.add_argument("output")
+    parser.add_argument("--text-output")
     args = parser.parse_args()
     source = Path(args.input).read_text(encoding="utf-8")
     if re.search(r"TODO|TBD|<!--\s*(?:IMAGE|NOTE):", source, re.I):
@@ -52,6 +53,15 @@ def main() -> int:
             body = inject_style(body, tag, style)
     output = f'<section style="{STYLES["wrapper"]}">\n{body}\n</section>\n'
     Path(args.output).write_text(output, encoding="utf-8")
+    if args.text_output:
+        plain = re.sub(r"<!--.*?-->", "", source, flags=re.S)
+        plain = re.sub(r"!\[([^]]*)\]\([^)]+\)", r"[图片：\1]", plain)
+        plain = re.sub(r"\[([^]]+)\]\((https?://[^)]+)\)", r"\1（\2）", plain)
+        plain = re.sub(r"^#{1,6}\s+", "", plain, flags=re.M)
+        plain = re.sub(r"^\s*>\s?", "", plain, flags=re.M)
+        plain = re.sub(r"[*_`]", "", plain)
+        plain = re.sub(r"\n{3,}", "\n\n", plain).strip() + "\n"
+        Path(args.text_output).write_text(plain, encoding="utf-8")
     print(args.output)
     return 0
 

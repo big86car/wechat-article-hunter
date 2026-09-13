@@ -11,6 +11,7 @@
 | `wechat-content-research` | 多源研究、证据账本、观点缺口 | `research-pack.md`、`source-ledger.json` |
 | `wechat-article-outline` | 论点结构、叙事节奏、配图点位 | `outline.md` |
 | `wechat-article-writer` | 按内容类型生成公众号初稿 | `draft.md` |
+| `wechat-originality-gate` | 来源溯源、结构复刻与新增价值检查 | `originality-report.json` |
 | `wechat-article-editor` | 事实、逻辑、文风与传播性审校 | `review-report.md`、`article.md` |
 | `wechat-image-director` | 封面与正文配图策划/生成 | `image-plan.md`、`images/` |
 | `wechat-layout` | 微信友好 HTML 与纯文本导出 | `article.html`、`article.txt` |
@@ -24,6 +25,7 @@
 - **内容路由**：新闻、GitHub 项目、论文、产品评测、教程和观点文章采用不同研究与叙事结构。
 - **发布受控**：默认只生成草稿或写入草稿箱；公开发布、群发和付费操作必须另行明确授权。
 - **低耦合**：不绑定单一模型、搜索引擎、图片服务或内容平台客户端。
+- **不以反爬或洗稿为能力**：不绕过访问控制，不通过同义改写规避原创检测；输入必须来自公开、授权或用户提供的材料。
 
 ## 安装
 
@@ -69,6 +71,7 @@ wechat-articles/2026-09-13-agent-turning-point/
 ├── source-ledger.json
 ├── outline.md
 ├── draft.md
+├── originality-report.json
 ├── review-report.md
 ├── article.md
 ├── image-plan.md
@@ -83,13 +86,15 @@ wechat-articles/2026-09-13-agent-turning-point/
 - `init_article.py`：初始化文章目录与 brief。
 - `validate_topic_cards.py`：校验选题卡字段和评分范围。
 - `validate_article.py`：检查标题、引用占位符、段落和基础质量信号。
+- `validate_originality_report.py`：阻止没有新增价值或来源风险未解决的文章进入终审。
 - `markdown_to_wechat_html.py`：将定稿 Markdown 转成内联样式 HTML。
+- `publish_draft.py`：校验发布包；只有显式传入 `--commit` 才提交草稿箱。
 
 排版脚本需要 `python -m pip install -r requirements.txt`。
 
 ## 安全与边界
 
-任何 Skill 都不得把密码、Cookie、AppSecret、access token 或私有素材写入仓库。发布 Skill 仅在用户明确要求提交草稿、完成凭据检查并确认目标账号后执行；默认不公开发布、不群发。
+任何 Skill 都不得把密码、Cookie、AppSecret、access token 或私有素材写入仓库。发布 Skill 仅在用户明确要求提交草稿、完成凭据检查并确认目标账号后执行；默认 dry-run，不公开发布、不群发。访问令牌缓存写入用户缓存目录而不是项目目录。
 
 ## License
 

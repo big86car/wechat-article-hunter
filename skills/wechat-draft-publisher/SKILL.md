@@ -22,9 +22,22 @@ If no authenticated publishing capability is available, create a handoff package
 
 ## Submission
 
-Upload inline images through the supported publishing path and replace local references with returned hosted URLs. Upload the cover as required, then create one draft using the final title, author, digest, source URL when applicable, and HTML body.
+Use `scripts/publish_draft.py` when direct API publishing is appropriate. It defaults to a non-network dry run:
+
+```bash
+python scripts/publish_draft.py --html article.html --cover images/cover.jpg \
+  --title "..." --author "..." --digest "..."
+```
+
+Only after the preconditions above and explicit user confirmation, add `--commit`. Read [references/wechat-api-contract.md](references/wechat-api-contract.md) before adapting endpoints or failure handling.
+
+The script uploads local inline images through the supported publishing path and replaces them with hosted URLs, uploads the cover as permanent material, then creates one draft. It removes the leading `<h1>` by default because the platform title is submitted separately; use `--keep-leading-h1` only when intentional.
+
+The script uses `WECHAT_APP_ID` and `WECHAT_APP_SECRET` from the environment. Its short-lived token cache defaults to the user's cache directory with restrictive file permissions. Never place the cache in the repository.
 
 Do not retry indefinitely. For authentication, permission, IP allowlist, quota, or validation failures, stop after one safe diagnostic retry at most and preserve the prepared package.
+
+The local receipt fingerprint prevents accidental duplicate submission. `--force` may bypass it only when the user explicitly wants another draft.
 
 ## Receipt
 
